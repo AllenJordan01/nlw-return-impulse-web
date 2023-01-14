@@ -20,3 +20,80 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [Prisma](https://www.prisma.io)
 - [Jest](https://jestjs.io)
 
+
+### Pré-requisitos
+
+- Instalar [Node.js](https://nodejs.org)
+
+### Clone o repositório
+
+```bash
+$ git clone https://github.com/AllenJordan01/nlw-return-impulse-web.git
+```
+
+### Executar Projeto
+
+#### Front-End
+
+```bash
+# Mudar para diretório
+$ cd nlw-return-8/
+```
+
+```bash
+# Mudar para diretório
+$ cd web/
+```
+
+- Instalar dependências
+
+```bash
+$ npm install
+```
+
+- Execute
+
+```bash
+$ npm run dev
+```
+
+- Executar scripts
+
+|           Ação            |   Utilização    |
+| :-----------------------: | :-------------: |
+| Iniciar o desenvolvimento |  `npm run dev`  |
+|  Compilar para produção   | `npm run build` |
+
+<br />
+
+#### Back-End
+
+```bash
+# Mudar para diretório
+$ cd nlw-return-8/
+```
+
+```bash
+# Mudar para diretório
+$ cd server/
+```
+
+- Instalar dependências
+
+```bash
+$ npm install
+```
+
+- Execute
+
+```bash
+$ npm run dev
+```
+
+- Executar scripts
+
+|           Ação            |   Utilização    |
+| :-----------------------: | :-------------: |
+| Iniciar o desenvolvimento |  `npm run dev`  |
+|  Compilar para produção   | `npm run build` |
+|      Iniciar testes       | `npm run test`  |
