@@ -37,7 +37,7 @@ $ git clone https://github.com/AllenJordan01/nlw-return-impulse-web.git
 
 ```bash
 # Mudar para diretório
-$ cd nlw-return-8/
+$ cd aulas/
 ```
 
 ```bash
@@ -70,7 +70,7 @@ $ npm run dev
 
 ```bash
 # Mudar para diretório
-$ cd nlw-return-8/
+$ cd aulas/
 ```
 
 ```bash
