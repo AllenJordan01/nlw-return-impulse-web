@@ -1,8 +1,8 @@
 import express from 'express';
 import { NodemailerMailAdapter } from './nodemailer/nodemailer-mail-adapter';
-import { PrismaFeedbacksRepository } from './repositories/prisma/prisma-feedback-repositories';
+import { PrismaFeedbacksRepository, PrismaReadFeedbacksRepository } from './repositories/prisma/prisma-feedback-repositories';
 import { SubmitFeedbackUseCase } from './use-cases/submit-feedback-use-case';
-
+import { ReadFeedbackUseCase } from './use-cases/read-feedback-use-case';
 export const routes = express.Router();
 
 
@@ -28,9 +28,22 @@ routes.post('/feedbacks', async (req, res) => {
 });
 
 routes.get('/listafeedbacks', async (req, res) => {
+    const { type, comment, screenshot } = req.body;
+
+    const prismaReadFeedbacksRepository = new PrismaReadFeedbacksRepository();
+    
+    const readFeedbackUseCase = new ReadFeedbackUseCase(
+        prismaReadFeedbacksRepository,
+    );
+
+    await readFeedbackUseCase.execute({
+        type,
+        comment,
+        screenshot
+    });
 
     return res.status(200).send({
-        'message' : 'Okay',
+        'message' : 'Okay'
         
     });
 });
